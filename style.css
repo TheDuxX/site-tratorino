@@ -35,7 +35,10 @@ header {
 
 header > img {
     max-width: 250px;
+    min-width: 125px;
 }
+
+
 
 form {
     background: none;
@@ -46,7 +49,7 @@ form {
 
 form input, form button {
     background: none;
-    font-size: 1.2em;
+    font-size: 0.8em;
     border-radius: .2em;
     border: none;
     padding: .2em;
@@ -68,7 +71,7 @@ form button:hover {
 
 #menu {
     background: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     max-width: 600px;
@@ -97,5 +100,27 @@ header nav ul li {
 
 .fa-bars:hover {
     font-size: 1.75em;
-    font-stretch: expanded;
+    font-stretch: expanded;    
+}
+
+main > div {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(imagens/Home-full.jpg);
+    background-size: cover;
+    background-position: left center;
+    border-radius: .2em;
+    max-width: 800px;
+    min-height: 300px;
+    padding: 10px;
+    margin: 2px auto 5px auto;
+}
+
+.about {
+    margin-top: 15em;
+    margin-left: 10em;
+    max-height: 3em;
+    border: none;
+    padding: auto;
+    border-radius: 2em;
 }

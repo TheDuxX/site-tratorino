@@ -106,6 +106,7 @@ header nav ul li {
     font-size: 1.5em;
     color: var(--cor00);
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .fa-bars:hover {

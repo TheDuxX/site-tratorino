@@ -18,6 +18,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,17 +26,62 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+
+
+
+/* CABEÇALHO*/
+
 header {
     background-color: white;
     width: 100vw;
     height: 65px;
+
+    display: flex;
 }
 
-div.banner {
+header > div.menu {
+    width: 30px;
+    height: 30px;
+
+    background-image: url(imagens/menu-normal.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header > div.logo {
     background-color: #191919;
+    justify-content: center;
+}
+
+header > div.pesq {
+    background-color: #252525;
+}
+
+
+/* BANNER */
+
+div.banner {
     width: 100vw;
     height: 220px;
 }
+
+div.banner > div.imagem {
+    width: 95vw;
+    height: 200px;
+    margin: 10px auto ;
+
+    border-radius: .3em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+
+    background-image: url(imagens/Home-400px.jpg);
+    background-repeat: no-repeat;
+    background-position: center left; 
+    background-size: cover;
+}
+
+
+
+/* PRODUTOS */
 
 div.produtos {
     background-color: #f7a833;
@@ -43,8 +89,12 @@ div.produtos {
     height: 550px;
 }
 
+
+
+/* RODAPÉ */
+
 footer {
-    background-color: #191919;
+    background-color: #252525;
     width: 100vw;
     height: 160px;
 }

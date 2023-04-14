@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4b5c090aa.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Tratorino Peças</title>
 </head>
@@ -78,26 +79,8 @@
         </div>
         <p class="copy">© 2022 Tratorino Peças  |  Termos de Service  |  Políticas de Privacidade</p>
     </footer>
-    <a href="#topo" class="topo" data-anima="scroll"></a>
-    <script>
-        const scrollAnima = document.querySelector('[data-anima="scroll"]');
-
-        const metadeWindow = window.innerHeight
-        
-        function animarScroll() {
-            const topoItem = scrollAnima.getBoundingClientRect().top
-            
-            const ItemVisivel = topoItem - metadeWindow < 0 
-
-            if(ItemVisivel) {
-                scrollAnima.classList.add('show-button')
-            }
-        }
-
-        window.addEventListener('scroll', animarScroll)
-
-        
-    </script>
+    <div onclick="scrollToTop()" class="topo"></div>
+    
 </body>
 
 </html>

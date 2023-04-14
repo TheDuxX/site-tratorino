@@ -21,12 +21,48 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color:#EEEEEE;
     font-family: var(--fonte-padrao);
+
 }
 
+::-webkit-scrollbar {
+    width: 05px;
+    height: 05px;
+}
 
+::-webkit-scrollbar-track {
+    background-color: var(--cor04);
+    border-radius: 3em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor05);
+    border-radius: 3em;
+}
+
+.topo {
+    width: 2em;
+    height: 2em;
+    
+    position: fixed;
+    right: -50px;
+    bottom: 20px;
+    
+    background: #fff;
+    border: solid 1px var(--cor00);
+    border-radius: 50%;
+
+    background-image: url(imagens/icon-arrowup.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
 
 
 /* CABEÇALHO*/
@@ -37,11 +73,13 @@ header {
     height: 65px;
 
     display: flex;
+    align-items: center;
 }
 
 header > div.menu {
     width: 30px;
     height: 30px;
+    margin-left: 20px;
 
     background-image: url(imagens/menu-normal.svg);
     background-repeat: no-repeat;
@@ -49,12 +87,24 @@ header > div.menu {
 }
 
 header > div.logo {
-    background-color: #191919;
-    justify-content: center;
+    min-width: 200px;
+    min-height: 25px;
+    margin: auto;
+
+    background-image: url(imagens/logo-tratorino.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 header > div.pesq {
-    background-color: #252525;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+
+    background-image: url(imagens/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -125,22 +175,26 @@ div.oferta p {
 
 div.produtos {
     width: 100vw;
-    height: 550px;
+    min-height: 350px;
     padding: 0px 10px;
+    margin-bottom: 10px;
 
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px;
 
 }
 
-div.pdt1 {
-    width: 50%;
+div.basebox {
+    width: 100%;
     height: 230px;
     
     background-color: #ffffff;
     border: solid 1px #f7a833;
     border-radius: .4rem;
+
+    text-align: center;
+    line-height: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -148,7 +202,7 @@ div.pdt1 {
     justify-content: space-around;
 }
 
-div.pdt1 > .imgpdt1{
+.imgpdt1{
     width: 150px;
     height: 100px;
 
@@ -158,34 +212,177 @@ div.pdt1 > .imgpdt1{
     background-position: center;
 }
 
-div.pdt2 {
-    width: 50%;
-    height: 230px;
-    
-    background-color: #ffffff;
-    border: solid 1px #f7a833;
-    border-radius: .4rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.imgpdt1:hover {
+    background-image: url(imagens/produto-01/02.jpg);
 }
 
-div.pdt2 > .imgpdt2{
+.imgpdt2{
     width: 150px;
     height: 100px;
 
-    background-image: url(imagens/produto-01/01.jpg);
+    background-image: url(imagens/produto-02/02.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.imgpdt2:hover {
+    background-image: url(imagens/produto-02/01.jpg);
+}
+
+.imgpdt3{
+    width: 150px;
+    height: 100px;
+
+    background-image: url(imagens/produto-03/01.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgpdt3:hover {
+    background-image: url(imagens/produto-03/02.jpg);
+}
+
+.imgpdt4{
+    width: 150px;
+    height: 100px;
+
+    background-image: url(imagens/produto-04/01.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgpdt4:hover {
+    background-image: url(imagens/produto-04/02.jpg);
+}
+
+.imgpdt5{
+    width: 150px;
+    height: 100px;
+
+    background-image: url(imagens/produto-05/01.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgpdt5:hover {
+    background-image: url(imagens/produto-05/02.jpg);
+}
+
+.imgpdt6{
+    width: 150px;
+    height: 100px;
+
+    background-image: url(imagens/produto-06/01.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgpdt6:hover {
+    background-image: url(imagens/produto-06/02.jpg);
+}
+
+.carregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.mostrar {
+    width: 40%;
+    height: 2.5em;
+
+    margin-bottom: 10px;
+
+    border: none;
+    border-radius: 5em;
+    
+    background: linear-gradient(to right, rgba(249, 161, 59, 1), rgb(247, 208, 51));
+
+    color: white;
+    font-size: .8em;
+    font-weight: 900;
+
+    cursor: pointer;    
+}
+
 
 /* RODAPÉ */
 
 footer {
     background-color: #252525;
+
     width: 100vw;
     height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-weight: 300;
+    font-size: .7em;
+    text-align: center;
+    letter-spacing: .04rem;
+    line-height: 1.2rem;
+        
+    color: white;
+}
+
+footer > p.infos {
+    padding-top: 10px;
+}
+
+footer > div.icons {
+    width: 135px;
+    height: 25px;  
+    margin: auto;
+    display: flex;
+
+}
+
+div.icons > .fb {
+    width: 100vw;
+    height: 25px;
+
+    background-image: url(imagens/icon-fb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.icons > .whats {
+    width: 100vw;
+    height: 25px;
+
+    background-image: url(imagens/icon-whats.svg);
+    background-repeat: no-repeat;    
+    background-position: center;
+}
+
+div.icons > .pin {
+    width: 100vw;
+    height: 25px;
+
+    background-image: url(imagens/icon-pin.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+div.icons > .mail {
+    width: 100vw;
+    height: 25px;
+
+    background-image: url(imagens/icon-mail.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+footer > .copy {    
+    letter-spacing: normal;
+    font-size: 0.8em;
 }

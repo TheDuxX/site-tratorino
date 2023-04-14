@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="topo">
 
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,8 @@
 <body>
     <header>
         <div class="menu"></div>
-        <div class="logo">LOGO</div>
-        <div class="pesq">Pesquisa</div>
+        <div class="logo"><a href="#"></a></div>
+        <div class="pesq"></div>
     </header>
     <div class="banner">
         <div class="imagem"></div>
@@ -26,22 +26,78 @@
     </div>
     <div class="produtos">
         
-        <div class="pdt1">
+        <div class="basebox">
             <div class="imgpdt1"></div>
             <p class="titulo">Bomba Hidráulica</p>
             <p class="preco">R$ 3.225,74</p>
             <button class="comprar">COMPRAR</button>
         </div>
-        <div class="pdt2">
+        <div class="basebox">
             <div class="imgpdt2"></div>
             <p class="titulo">Prisioneiro do Eixo</p>
             <p class="preco">R$ 16,74</p>
             <button class="comprar">COMPRAR</button>
         </div>
+        <div class="basebox">
+            <div class="imgpdt3"></div>
+            <p class="titulo">Assento Pneumático</p>
+            <p class="preco">R$ 6.013,44</p>
+            <button class="comprar">COMPRAR</button>
+        </div>
+        <div class="basebox">
+            <div class="imgpdt4"></div>
+            <p class="titulo">Chave Ignição Trator</p>
+            <p class="preco">R$ 334,18</p>
+            <button class="comprar">COMPRAR</button>
+        </div>
+        <div class="basebox">
+            <div class="imgpdt5"></div>
+            <p class="titulo">Farol Dianteiro Sem</p>
+            <p class="preco">R$ 66,31</p>
+            <button class="comprar">COMPRAR</button>
+        </div>
+        <div class="basebox">
+            <div class="imgpdt6"></div>
+            <p class="titulo">Bomba Alimentadora</p>
+            <p class="preco">R$ 494,84</p>
+            <button class="comprar">COMPRAR</button>
+        </div>
     </div>
+    <div class="carregar"><button class="mostrar">MOSTRAR MAIS</button></div>
     <footer>
-
+        <P class="infos"><strong>42 99989-8418   |   42 3272-6809</strong><br>
+                       Alameda Washington Luís, 799<br>
+                       Alto das Oliveiras, Telêmaco Borba<br>
+                       Paraná -BR, CEP:84266-450
+        </p>
+        <div class="icons">
+            <div class="fb"></div>
+            <div class="whats"></div>
+            <div class="pin"></div>
+            <div class="mail"></div>
+        </div>
+        <p class="copy">© 2022 Tratorino Peças  |  Termos de Service  |  Políticas de Privacidade</p>
     </footer>
+    <a href="#topo" class="topo" data-anima="scroll"></a>
+    <script>
+        const scrollAnima = document.querySelector('[data-anima="scroll"]');
+
+        const metadeWindow = window.innerHeight
+        
+        function animarScroll() {
+            const topoItem = scrollAnima.getBoundingClientRect().top
+            
+            const ItemVisivel = topoItem - metadeWindow < 0 
+
+            if(ItemVisivel) {
+                scrollAnima.classList.add('show-button')
+            }
+        }
+
+        window.addEventListener('scroll', animarScroll)
+
+        
+    </script>
 </body>
 
 </html>

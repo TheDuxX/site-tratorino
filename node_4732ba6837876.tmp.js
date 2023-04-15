@@ -7,14 +7,14 @@ function scrollToTop(){
     scroll.classList.toggle("active" , window.scrollY > )
 
 })*/
-var scrollToButton = document.getElementById("btntop");
+var scrollToButton = document.getElementById("topo-botao");
 var docElement = document.documentElement;
 
 function handleScroll(){
     var scrollTotal = docElement.scrollHeight - docElement.clientHeight;
     var count = docElement.scrollTop / scrollTotal
     if (count > 0.5){
-        scrollToButton.style.right = '20px';
+        console.log(scrollToButton)
     } else {
     }
 }

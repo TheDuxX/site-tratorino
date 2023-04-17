@@ -16,6 +16,7 @@ function handleScroll(){
     if (count > 0.5){
         scrollToButton.style.right = '20px';
     } else {
+        scrollToButton.style.right = '-50px';
     }
 }
 

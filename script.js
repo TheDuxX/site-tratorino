@@ -2,11 +2,6 @@ function scrollToTop(){
     window.scrollTo(0,0);
 }
 
-/*window.addEventListener('scroll', function(){
-    var scroll = document.querySelector('.topo');
-    scroll.classList.toggle("active" , window.scrollY > )
-
-})*/
 var scrollToButton = document.getElementById("btntop");
 var docElement = document.documentElement;
 

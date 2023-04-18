@@ -15,4 +15,15 @@ function handleScroll(){
     }
 }
 
-document.addEventListener("scroll", handleScroll)
+document.addEventListener("scroll", handleScroll);
+
+var btn = document.querySelector('.pesq');
+var box = document.querySelector('.pesq-box');
+
+btn.addEventListener('click', function(){
+    if (box.style.display == "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+})

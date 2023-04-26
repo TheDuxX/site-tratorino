@@ -12,16 +12,24 @@
 
 <body>
     <header>
-        <div class="menu"></div>
-        <div class="logo"><a href="#"></a></div>
-        <form action="pesq" class="pesq">
-        </form>
-        <div class="pesq-box" style="display: none;">
-            <input type="text" name="text" id="pesq-text" placeholder="Digite aqui sua pesquisa">
-        </div>
-
-
-
+        <a id="logo" href="#"></a>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()" aria-expanded="false" aria-controls="menu"
+                aria-haspopup="true" aria-label="Abrir Menu">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Contato</a></li>
+                <div class="pesq-area">
+                    <input type="text" name="pesq-text" id="pesq-text" placeholder="Digite sua pesquisa">
+                    <button class="pesq" onclick="btnPesq()"></button>
+                </div>
+            </ul>
+            
+        </nav>
     </header>
     <div class="banner">
         <div class="imagem"></div>

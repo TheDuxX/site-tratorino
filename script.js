@@ -27,3 +27,17 @@ btn.addEventListener('click', function(){
         box.style.display = "none";
     }
 })
+
+const bntMobile = document.getElementById('btn-mobile');
+
+function toggleMenu() {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+}
+
+const pesqBnt = document.querySelector('.pesq');
+
+function btnPesq() {
+    const textPesq = document.getElementById('pesq-text');
+    textPesq.classList.toggle('ativo');
+}

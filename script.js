@@ -9,9 +9,9 @@ function handleScroll(){
     var scrollTotal = docElement.scrollHeight - docElement.clientHeight;
     var count = docElement.scrollTop / scrollTotal
     if (count > 0.5){
-        scrollToButton.style.right = '20px';
+        scrollToButton.style.bottom = '20px';
     } else {
-        scrollToButton.style.right = '-50px';
+        scrollToButton.style.bottom = '-50px';
     }
 }
 
